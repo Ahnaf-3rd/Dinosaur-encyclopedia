@@ -1,0 +1,521 @@
+/* =====================
+   Global Styles
+   ===================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #4a8f3c;
+  --secondary: #8f6c3c;
+  --accent: #c4523d;
+  --light: #f4f1e3;
+  --dark: #2c3e50;
+  --cream: #f9f6e7;
+  --dark-green: #3a7340;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--light); color: var(--dark); line-height: 1.6; font-family: 'Roboto', sans-serif; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-pad { padding: 40px 0; }
+section { scroll-margin-top: 90px; }
+
+/* =====================
+   Header
+   ===================== */
+.site-header {
+  background: var(--primary);
+  padding: 12px 0;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+.header-content { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo h1 { color: #fff; font-size: 24px; font-weight: 700; font-family: 'Chakra Petch', sans-serif; }
+.logo i { color: #fff; font-size: 28px; }
+.site-nav ul { list-style: none; display: flex; gap: 22px; }
+.site-nav a { color: #fff; text-decoration: none; font-weight: 500; padding: 8px 10px; border-radius: 6px; }
+.site-nav a:hover { background: rgba(255,255,255,.12); }
+.nav-toggle { display: none; background: transparent; border: 0; color: #fff; font-size: 22px; cursor: pointer; }
+
+.search-bar { display: flex; align-items: center; background: #fff; border-radius: 30px; padding: 5px 12px; width: 300px; }
+.search-bar input { border: 0; outline: 0; flex: 1; padding: 8px; background: transparent; }
+.search-bar button { background: transparent; border: 0; color: var(--primary); cursor: pointer; }
+.sr-only { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+/* =====================
+   Hero
+   ===================== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+              url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: #fff; text-align: center; padding: 96px 20px; margin-bottom: 32px;
+  border-radius: 0 0 20px 20px;
+}
+.hero h2 { font-size: 3rem; margin-bottom: 16px; font-family: 'Chakra Petch', sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,.5); }
+.hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 22px; }
+.btn {
+  display: inline-block; background: var(--accent); color: #fff; padding: 12px 28px;
+  border-radius: 30px; text-decoration: none; font-weight: 600; transition: transform .2s, box-shadow .2s, background .2s;
+}
+.btn:hover { background: #a94232; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,.2); }
+
+/* =====================
+   Sections & Cards
+   ===================== */
+.section-title {
+  text-align: center; margin: 20px 0 24px; color: var(--primary);
+  font-size: 2rem; font-family: 'Chakra Petch', sans-serif; position: relative;
+}
+.section-title::after {
+  content: ''; display: block; width: 200px; height: 3px; margin: 10px auto 0;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+}
+.dino-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 22px; }
+.dino-card {
+  background: #fff; border-radius: 14px; overflow: hidden; position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1); transition: transform .25s, box-shadow .25s;
+}
+.dino-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,.15); }
+.dino-img { height: 200px; background-size: cover; background-position: center; position: relative; }
+.dino-img::after { content: ''; position: absolute; inset: auto 0 0 0; height: 50%; background: linear-gradient(to top, rgba(0,0,0,.7), transparent); }
+.t-rex-img { background-image: var(--t-rex-img, url('t-rex.png')); }
+.triceratops-img { background-image: var(--trike-img, url('triceratops.png')); }
+.velociraptor-img { background-image: var(--velo-img, url('velociraptor.png')); }
+.stegosaurus-img { background-image: var(--stego-img, url('stegosaurus.png')); }
+.brachiosaurus-img { background-image: var(--brachio-img, url('brachiosaurus.png')); }
+.ankylosaurus-img { background-image: var(--ankylo-img, url('ankylosaurus.png')); }
+.spinosaurus-img { background-image: var(--spino-img, url('spinosaurus.png')); }
+/* Add these new image classes to your existing CSS */
+.torosaurus-img { background-image: url('torosaurus.png'); }
+.pachycephalosaurus-img { background-image: url('pachycephalosaurus.png'); }
+.carnotaurus-img { background-image: url('carnotaurus.png'); }
+.argentinosaurus-img { background-image: url('argentinosaurus.png'); }
+.titanosaurus-img { background-image: url('titanosaurus.png'); }
+.mapusaurus-img { background-image: url('mapusaurus.png'); }
+.giganotosaurus-img { background-image: url('giganotosaurus.png'); }
+.deinonychus-img { background-image: url('deinonychus.png'); }
+/* New Jurassic dinosaur images */
+.allosaurus-img { background-image: url('allosaurus.png'); }
+.diplodocus-img { background-image: url('diplodocus.png'); }
+.ceratosaurus-img { background-image: url('Ceratosaurus.png'); }
+.camarasaurus-img { background-image: url('camarasaurus.png'); }
+.apatosaurus-img { background-image: url('apatosaurus.png'); }
+.dilophosaurus-img { background-image: url('dipholosaurus.png'); }
+
+.dino-info { padding: 18px; }
+.dino-info h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 8px; font-family: 'Chakra Petch', sans-serif; }
+.dino-info p { color: #555; margin-bottom: 12px; }
+.dino-meta { display: flex; justify-content: space-between; color: var(--secondary); font-weight: 500; gap: 12px; flex-wrap: wrap; }
+.dino-meta span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Filters */
+.filters { display: flex; justify-content: center; gap: 12px; margin: 12px 0 24px; flex-wrap: wrap; }
+.filter-btn { padding: 8px 14px; background: #fff; border: 1px solid var(--primary); border-radius: 20px; cursor: pointer; transition: all .2s; color: var(--dark); }
+.filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; }
+.no-results { text-align: center; padding: 28px; color: #777; display: none; width: 100%; }
+.no-results-icon { font-size: 2rem; margin-bottom: 10px; }
+
+/* =====================
+   Timeline
+   ===================== */
+.timeline { background: var(--dark); color: #fff; padding: 50px 0; margin: 32px 0; border-radius: 20px; position: relative; overflow: hidden; }
+.timeline::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
+  opacity: .08; z-index: 0;
+}
+.timeline-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+.timeline-item { display: flex; align-items: center; gap: 18px; margin-bottom: 32px; opacity: 0; transform: translateY(18px); transition: opacity .4s, transform .4s; }
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+.timeline-period { flex: 1; text-align: right; padding-right: 12px; font-weight: 700; font-size: 1.1rem; color: var(--secondary); font-family: 'Chakra Petch', sans-serif; }
+.timeline-dot {
+  width: 30px; height: 30px; border-radius: 50%; background: var(--accent); border: 0;
+  position: relative; z-index: 2; cursor: pointer;
+}
+.timeline-dot::after { content: ''; position: absolute; width: 2px; height: 100px; background: var(--accent); top: 30px; left: 50%; transform: translateX(-50%); z-index: 1; }
+.timeline-item:last-child .timeline-dot::after { display: none; }
+.timeline-dot:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.timeline-info { flex: 2; padding: 12px 16px; background: rgba(255,255,255,.06); border-radius: 8px; transition: background .2s; }
+.timeline-info:hover { background: rgba(255,255,255,.1); }
+
+/* =====================
+   Fossils
+   ===================== */
+.fossil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.fossil-card {
+  background: var(--cream);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  transition: transform .25s, box-shadow .25s;
+  border: 2px solid #d8cbb1; /* gives that "stone slab" look */
+}
+.fossil-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.18);
+}
+
+.fossil-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.fossil-img::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+}
+
+.archaeopteryx-img {
+  background-image: url('archaeopteryx-fossil.png');
+}
+.footprint-img {
+  background-image: url('fossil-footprint.png');
+}
+.amber-img {
+  background-image: url('amber-fossil.png');
+}
+
+.fossil-info {
+  padding: 18px;
+}
+.fossil-info h3 {
+  color: var(--dark-green);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+.fossil-info p {
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.learn-more {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+  text-decoration: none;
+}
+.learn-more:hover {
+  background: #a94232;
+  transform: translateY(-2px);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* =====================
+   Footer
+   ===================== */
+footer { background: var(--dark); color: #fff; padding: 40px 0; text-align: center; position: relative; }
+footer::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat; opacity: .05; z-index: 0; }
+.footer-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.social-icons { display: flex; gap: 16px; }
+.social-icons a { color: #fff; font-size: 1.4rem; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.12); transition: transform .2s, background .2s; }
+.social-icons a:hover { transform: translateY(-4px); background: rgba(255,255,255,.2); }
+
+.placeholder { text-align: center; color: #555; }
+
+/* =====================
+   Modal
+   ===================== */
+.modal[aria-hidden="true"] { display: none; }
+.modal { position: fixed; inset: 0; z-index: 200; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); }
+.modal-card { position: relative; z-index: 1; background: #fff; color: var(--dark); width: min(600px, 92%); margin: 12vh auto 0; padding: 22px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+.modal-close { position: absolute; top: 10px; right: 10px; background: transparent; border: 0; font-size: 20px; cursor: pointer; color: var(--dark); }
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 900px) {
+  .header-content { grid-template-columns: auto auto auto; }
+  .search-bar { width: 220px; }
+  .hero h2 { font-size: 2.2rem; }
+}
+@media (max-width: 760px) {
+  .nav-toggle { display: inline-block; }
+  .site-nav { position: absolute; left: 0; right: 0; top: 60px; background: var(--primary); display: none; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; padding: 12px 20px; gap: 8px; }
+  .header-content { grid-template-columns: auto auto 1fr; }
+  .search-bar { justify-self: end; width: 180px; }
+  .timeline-item { flex-direction: column; text-align: center; }
+  .timeline-period { text-align: center; padding-right: 0; }
+  .hero h2 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .btn { padding: 10px 20px; }
+  .dino-grid { grid-template-columns: 1fr; }
+  .fossil-grid { grid-template-columns: 1fr; }
+}
+/* Add this to your existing CSS */
+.section-intro {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Add these new image classes to your existing CSS */
+.coelophysis-img { background-image: url('coelophysis.png'); }
+.plateosaurus-img { background-image: url('plateosaurus.png'); }
+.eoraptor-img { background-image: url('eoraptor.png'); }
+.herrerasaurus-img { background-image: url('herrerasaurus.png'); }
+
+/* Ensure the modal has proper styling for longer content */
+.modal-card {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-card h3 {
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.modal-card p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Back button styling for fossil pages */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+  text-decoration: none;
+  background-color: rgba(74, 143, 60, 0.1);
+}
+/* Fossil Section Enhancements */
+.fossil-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.fossil-filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #4a7c59;
+  background: white;
+  color: #4a7c59;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.fossil-filter-btn.active,
+.fossil-filter-btn:hover {
+  background: #4a7c59;
+  color: white;
+}
+
+.fossil-period {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.fossil-details {
+  margin: 15px 0;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.detail-item i {
+  margin-right: 10px;
+  margin-top: 3px;
+  color: #4a7c59;
+  min-width: 16px;
+}
+
+.detail-item h4 {
+  margin: 0 0 5px 0;
+  font-size: 0.9rem;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+/* Discovery Map */
+.discovery-map {
+  background: #f8f9fa;
+  padding: 50px 0;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;              /* Make it responsive */
+  max-width: 1000px;        /* Limit so it matches the source image width */
+  margin: 30px auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.world-map {
+  position: relative;
+  width: 100%;
+  padding-top: 50%; /* Maintain aspect ratio (map is ~2:1 width:height) */
+  background-image: url('https://scontent.fdac96-1.fna.fbcdn.net/v/t1.6435-9/47005064_1939497156169765_8824314127028584448_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHGl9klwdHJL_R20L4VcsBU75Ej6qIdUdzvkSPqoh1R3JqGREjm17XUGmL7fQ4U3OXoK4NIFNb9e_6ivMEapr_Q&_nc_ohc=XjoFTI_m9C0Q7kNvwFZfD0f&_nc_oc=AdmUHa4mwwyuAJAH2etjUTEATlR39YbhE58sjw3evDx-mzi2ozyMPd2Hws3EoclzuYc&_nc_zt=23&_nc_ht=scontent.fdac96-1.fna&_nc_gid=qVPq3j1bxj3PRAZtOJi4yQ&oh=00_AfX-pc_nSWLj9-9a9LvZJCGvlH_nhiT_eA5_Wjc3b14dQw&oe=68D9F59B');
+  background-size: cover;
+  background-position: center;
+}
+
+.map-point {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.point-tooltip {
+  display: none;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.map-point:hover .point-tooltip {
+  display: block;
+}
+
+
+.point-tooltip:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.map-legend {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-legend h3 {
+  margin-top: 0;
+}
+
+.map-legend ul {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+}
+
+.map-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(228, 26, 28, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(228, 26, 28, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(228, 26, 28, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .map-legend ul {
+    columns: 1;
+  }
+  
+  .fossil-filters {
+    gap: 5px;
+  }
+  
+  .fossil-filter-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+.sue-img {
+  background-image: url('sue-trex.png');
+}
+/* Fossil filter styles */
+.fossil-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px 0 24px;
+    flex-wrap: wrap;
+}
+
+.fossil-filter-btn {
+    padding: 8px 14px;
+    background: #fff;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .2s;
+    color: var(--dark);
+}
+
+.fossil-filter-btn:hover, 
+.fossil-filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archaeopteryx Fossil - Dinopedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .fossil-detail {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .fossil-detail img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .fossil-detail h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .fossil-detail h3 {
+      color: var(--secondary);
+      margin: 25px 0 15px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="index.html" aria-label="Go to homepage">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#dinosaurs">Dinosaurs</a></li>
+          <li><a href="index.html#timeline">Timeline</a></li>
+          <li><a href="index.html#fossils">Fossils</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-bar" role="search">
+        <label class="sr-only" for="search-input">Search dinosaurs</label>
+        <input id="search-input" type="text" placeholder="Search dinosaurs…" />
+        <button type="submit" title="Search" aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container section-pad">
+    <a href="index.html#fossils" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Fossils
+    </a>
+    
+    <div class="fossil-detail">
+      <h1>Archaeopteryx Fossil</h1>
+      
+      <div class="fossil-img archaeopteryx-img" role="img" aria-label="Detailed Archaeopteryx fossil"></div>
+      
+      <h2>The Missing Link Between Dinosaurs and Birds</h2>
+      <p>Discovered in Germany in 1861, Archaeopteryx is one of the most important fossils ever found. It provides crucial evidence for the evolutionary link between non-avian dinosaurs and modern birds.
+        Proving that birds are the modern form of Coelerosauroid theropod dinosaurs, Archaeopteryx exhibits a unique combination of avian and reptilian features.
+      </p>
+      
+      <h3>Key Characteristics</h3>
+      <ul>
+        <li>Feathers similar to modern birds</li>
+        <li>Teeth and bony tail like dinosaurs</li>
+        <li>Wishbone (furcula) for flight muscle attachment</li>
+        <li>Three-fingered hands with claws</li>
+      </ul>
+      
+      <h3>Significance in Paleontology</h3>
+      <p>Archaeopteryx lived approximately 150 million years ago during the Late Jurassic period. Its discovery came just two years after Charles Darwin published "On the Origin of Species," providing powerful evidence for his theory of evolution.</p>
+      
+      <h3>Discovery Sites</h3>
+      <p>All twelve known specimens of Archaeopteryx have been found in the Solnhofen Limestone deposits in Bavaria, Germany. These limestone deposits were once a tropical lagoon with low oxygen levels at the bottom, creating perfect conditions for fossil preservation.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="logo">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </div>
+      <p>Your ultimate guide to the prehistoric world</p>
+      <div class="social-icons">
+        <a href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p>&copy; 2025 Dinopedia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

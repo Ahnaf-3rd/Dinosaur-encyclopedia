@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinosaur Footprints - Dinopedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .fossil-detail {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .fossil-detail img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .fossil-detail h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .fossil-detail h3 {
+      color: var(--secondary);
+      margin: 25px 0 15px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="index.html" aria-label="Go to homepage">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#dinosaurs">Dinosaurs</a></li>
+          <li><a href="index.html#timeline">Timeline</a></li>
+          <li><a href="index.html#fossils">Fossils</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-bar" role="search">
+        <label class="sr-only" for="search-input">Search dinosaurs</label>
+        <input id="search-input" type="text" placeholder="Search dinosaurs…" />
+        <button type="submit" title="Search" aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container section-pad">
+    <a href="index.html#fossils" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Fossils
+    </a>
+    
+    <div class="fossil-detail">
+      <h1>Dinosaur Footprints</h1>
+      
+      <div class="fossil-img footprint-img" role="img" aria-label="Detailed dinosaur footprint fossil"></div>
+      
+      <h2>Trace Fossils That Tell a Story</h2>
+      <p>Dinosaur footprints, also known as ichnites, are trace fossils that provide unique insights into dinosaur behavior, movement, and social structure that bones alone cannot reveal.
+        These impressions in rock were made when dinosaurs walked across soft ground, leaving behind a record of their presence that has lasted millions of years.
+        Sometimes footprints of larger Sauropods are found to contain fossilized remains of other preserved smaller dinosaurs that got trapped in the mud while following the larger dinosaurs.
+        One example of Argentinosaurus contained fossilized remains of 18 smaller dinosaurs in its footprints leading to new discoveries.
+        <figure>
+            <img src="foot.png" alt="">
+            <figcaption>
+                An Argentinosaurus footprint containing fossilized remains of smaller dinosaurs that got trapped in the mud while following the larger dinosaur.
+            </figcaption>
+        </figure>
+      </p>
+      
+      <h3>What Footprints Reveal</h3>
+      <ul>
+        <li>Speed and gait of dinosaurs</li>
+        <li>Social behavior (herding, hunting patterns)</li>
+        <li>Size and weight estimates</li>
+        <li>Environmental conditions of the time</li>
+      </ul>
+      
+      <h3>Famous Footprint Sites</h3>
+      <p>Significant dinosaur trackways have been found around the world, including:</p>
+      <ul>
+        <li>Dinosaur Ridge, Colorado, USA</li>
+        <li>Dinosaur State Park, Connecticut, USA</li>
+        <li>Lark Quarry, Australia</li>
+        <li>Zhaoqing, China</li>
+      </ul>
+      
+      <h3>Preservation Process</h3>
+      <p>Footprints were preserved when dinosaurs walked on soft sediment like mud or sand that later hardened into rock. The most common preservation occurs when the print fills with different sediment than the surrounding material, creating a natural cast.</p>
+      
+      <h3>Scientific Value</h3>
+      <p>Unlike body fossils, trackways capture moments in time, showing exactly how dinosaurs moved across the landscape. They provide evidence of dinosaur behavior that can't be deduced from skeletons alone, such as herding behavior, hunting strategies, and interactions between species.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="logo">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </div>
+      <p>Your ultimate guide to the prehistoric world</p>
+      <div class="social-icons">
+        <a href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p>&copy; 2025 Dinopedia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amber Fossils - Dinopedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .fossil-detail {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .fossil-detail img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .fossil-detail h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .fossil-detail h3 {
+      color: var(--secondary);
+      margin: 25px 0 15px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 20px 0;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="index.html" aria-label="Go to homepage">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#dinosaurs">Dinosaurs</a></li>
+          <li><a href="index.html#timeline">Timeline</a></li>
+          <li><a href="index.html#fossils">Fossils</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-bar" role="search">
+        <label class="sr-only" for="search-input">Search dinosaurs</label>
+        <input id="search-input" type="text" placeholder="Search dinosaurs…" />
+        <button type="submit" title="Search" aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container section-pad">
+    <a href="index.html#fossils" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Fossils
+    </a>
+    
+    <div class="fossil-detail">
+      <h1>Amber Fossils</h1>
+      
+      <div class="fossil-img amber-img" role="img" aria-label="Detailed amber fossil with insect"></div>
+      
+      <h2>Windows to Prehistoric Ecosystems</h2>
+      <p>Amber fossils are formed when tree resin hardens and fossilizes over millions of years, preserving trapped organisms in incredible detail. These time capsules provide unparalleled glimpses into ancient ecosystems.
+        Though the popular depiction from movies like "Jurassic Park" is scientifically inaccurate, amber fossils have still yielded remarkable discoveries that enhance our understanding of prehistoric life. 
+        Though we cannot extract dinosaur DNA from amber, we have uncovered a wealth of information about ancient insects, plants, and even small vertebrates.
+      </p>
+      
+      <h3>Formation Process</h3>
+      <ul>
+        <li>Tree resin flows and traps small organisms</li>
+        <li>Resin hardens into copal over thousands of years</li>
+        <li>Copal fossilizes into amber over millions of years</li>
+        <li>Preservation can include microscopic details</li>
+      </ul>
+      
+      <h3>Significant Discoveries</h3>
+      <p>Amber fossils have revealed:</p>
+      <ul>
+        <li>Feathered dinosaur tails with preserved pigment</li>
+        <li>Ancient insects, spiders, and other arthropods</li>
+        <li>Plant matter including flowers and leaves</li>
+        <li>Microscopic organisms like bacteria and fungi</li>
+      </ul>
+      
+      <h3>Major Amber Deposits</h3>
+      <p>The most significant amber deposits come from:</p>
+      <ul>
+        <li>Baltic region (44 million years old)</li>
+        <li>Dominican Republic (25-30 million years old)</li>
+        <li>Myanmar (Burmese amber, 99 million years old)</li>
+        <li>Canada (Cedar Lake, 75-80 million years old)</li>
+      </ul>
+      
+      <h3>Scientific Techniques</h3>
+      <p>Modern technology allows scientists to study amber inclusions without damaging them. CT scanning and synchrotron imaging can create 3D models of specimens, revealing internal structures that aren't visible to the naked eye.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="logo">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </div>
+      <p>Your ultimate guide to the prehistoric world</p>
+      <div class="social-icons">
+        <a href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://github.com/" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p>&copy; 2025 Dinopedia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

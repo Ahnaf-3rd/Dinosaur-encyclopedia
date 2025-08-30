@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinopedia — Your Very Own Dinosaur Encyclopedia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#hero" aria-label="Go to homepage">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#dinosaurs">Dinosaurs</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#fossils">Fossils</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-bar" role="search">
+        <label class="sr-only" for="search-input">Search dinosaurs</label>
+        <input id="search-input" type="text" placeholder="Search dinosaurs…" />
+        <button type="submit" title="Search" aria-label="Search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <h2>Discover the World of Dinosaurs</h2>
+      <p>Explore the fascinating creatures that ruled the Earth for over 150 million years. Learn about different species, their habitats, and the mysteries of their extinction.</p>
+      <a href="#dinosaurs" class="btn">Explore Dinosaurs</a>
+    </div>
+  </section>
+
+  <!-- Featured Dinosaurs -->
+  <section id="dinosaurs" class="container section-pad">
+    <h2 class="section-title">Featured Dinosaurs</h2>
+
+    <div class="filters" role="toolbar" aria-label="Dinosaur filters">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="carnivore" aria-pressed="false">Carnivores</button>
+      <button class="filter-btn" data-filter="herbivore" aria-pressed="false">Herbivores</button>
+      <button class="filter-btn" data-filter="cretaceous" aria-pressed="false">Cretaceous</button>
+      <button class="filter-btn" data-filter="jurassic" aria-pressed="false">Jurassic</button>
+      <button class="filter-btn" data-filter="triassic" aria-pressed="false">Triassic</button>
+    </div>
+
+    <div class="dino-grid">
+      <!-- Card 1 -->
+      <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+        <div class="dino-img t-rex-img" role="img" aria-label="Tyrannosaurus Rex illustration"></div>
+        <div class="dino-info">
+          <h3>Tyrannosaurus Rex</h3>
+          <p>The mighty king of dinosaurs, T‑Rex was a fierce predator with powerful jaws and sharp teeth.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+            <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+          </div>
+        </div>
+      </article>
+
+       <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+        <div class="dino-img spinosaurus-img" role="img" aria-label="Spinosaurus illustration"></div>
+        <div class="dino-info">
+          <h3>Spinosaurus</h3>
+          <p>The longest known carnivorous dinosaur, with a distinctive sail and semi-aquatic lifestyle.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+            <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="dino-card" data-diet="herbivore" data-period="cretaceous">
+        <div class="dino-img triceratops-img" role="img" aria-label="Triceratops illustration"></div>
+        <div class="dino-info">
+          <h3>Triceratops</h3>
+          <p>With its three horns and massive frill, Triceratops was one of the most recognizable dinosaurs.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+            <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+        <div class="dino-img velociraptor-img" role="img" aria-label="Velociraptor illustration"></div>
+        <div class="dino-info">
+          <h3>Velociraptor</h3>
+          <p>Small but intelligent, Velociraptors were agile predators that hunted in packs and unlike popular depictions, they were the size of a modern day Turkey 
+            and had feathers.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+            <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+        <div class="dino-img deinonychus-img" role="img" aria-label="Deinonychus illustration"></div>
+        <div class="dino-info">
+          <h3>Deinonychus</h3>
+          <p>A swift, intelligent avian theropodian predator with a large sickle-shaped claw on each foot, inspiring the "raptor" image in popular culture.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+            <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+      <div class="dino-img giganotosaurus-img" role="img" aria-label="Giganotosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Giganotosaurus</h3>
+        <p>One of the largest meat-eating dinosaurs, slightly bigger than T-Rex but had a narrower skull and less weight.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Add these cards to your More Dinosaurs section -->
+<article class="dino-card" data-diet="carnivore" data-period="triassic">
+  <div class="dino-img coelophysis-img" role="img" aria-label="Coelophysis illustration"></div>
+  <div class="dino-info">
+    <h3>Coelophysis</h3>
+    <p>One of the earliest known dinosaurs, a small, agile predator that lived during the Late Triassic period.</p>
+    <div class="dino-meta">
+      <span><i class="fas fa-history" aria-hidden="true"></i> Triassic Period</span>
+      <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+    </div>
+  </div>
+</article>
+
+<article class="dino-card" data-diet="herbivore" data-period="triassic">
+  <div class="dino-img plateosaurus-img" role="img" aria-label="Plateosaurus illustration"></div>
+  <div class="dino-info">
+    <h3>Plateosaurus</h3>
+    <p>One of the first large-bodied herbivorous dinosaurs, an early sauropodomorph that could walk on two or four legs.</p>
+    <div class="dino-meta">
+      <span><i class="fas fa-history" aria-hidden="true"></i> Triassic Period</span>
+      <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+    </div>
+  </div>
+</article>
+
+<article class="dino-card" data-diet="carnivore" data-period="triassic">
+  <div class="dino-img eoraptor-img" role="img" aria-label="Eoraptor illustration"></div>
+  <div class="dino-info">
+    <h3>Eoraptor</h3>
+    <p>Considered one of the most primitive dinosaurs, this small, lightly-built carnivore represents the base of the dinosaur evolutionary tree.</p>
+    <div class="dino-meta">
+      <span><i class="fas fa-history" aria-hidden="true"></i> Triassic Period</span>
+      <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+    </div>
+  </div>
+</article>
+
+<article class="dino-card" data-diet="carnivore" data-period="triassic">
+  <div class="dino-img herrerasaurus-img" role="img" aria-label="Herrerasaurus illustration"></div>
+  <div class="dino-info">
+    <h3>Herrerasaurus</h3>
+    <p>One of the earliest dinosaurs, this medium-sized predator had hinged jaws that allowed it to grasp struggling prey.</p>
+    <div class="dino-meta">
+      <span><i class="fas fa-history" aria-hidden="true"></i> Triassic Period</span>
+      <span><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Carnivore</span>
+    </div>
+  </div>
+</article>
+
+      <!-- Card 4 (Moved from More Dinosaurs) -->
+      <article class="dino-card" data-diet="herbivore" data-period="jurassic">
+        <div class="dino-img stegosaurus-img" role="img" aria-label="Stegosaurus illustration"></div>
+        <div class="dino-info">
+          <h3>Stegosaurus</h3>
+          <p>Known for the distinctive plates on its back and spiked tail used for defense.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+            <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 (Moved from More Dinosaurs) -->
+      <article class="dino-card" data-diet="herbivore" data-period="jurassic">
+        <div class="dino-img brachiosaurus-img" role="img" aria-label="Brachiosaurus illustration"></div>
+        <div class="dino-info">
+          <h3>Brachiosaurus</h3>
+          <p>One of the tallest dinosaurs, with a long neck that allowed it to reach high vegetation.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+            <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+          </div>
+        </div>
+      </article>
+
+          <article class="dino-card" data-diet="herbivore" data-period="cretaceous">
+      <div class="dino-img argentinosaurus-img" role="img" aria-label="Argentinosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Argentinosaurus</h3>
+        <p>The largest known land animals of all time, reaching lengths of up to 35 meters and weighed up to 75 tonnes.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+      <!-- Card 6 (Moved from More Dinosaurs) -->
+      <article class="dino-card" data-diet="herbivore" data-period="cretaceous">
+        <div class="dino-img ankylosaurus-img" role="img" aria-label="Ankylosaurus illustration"></div>
+        <div class="dino-info">
+          <h3>Ankylosaurus</h3>
+          <p>A heavily armored dinosaur with a club-like tail used for defense against predators.</p>
+          <div class="dino-meta">
+            <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+            <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="no-results" aria-live="polite">
+      <i class="fas fa-exclamation-circle no-results-icon" aria-hidden="true"></i>
+      <h3>No dinosaurs found</h3>
+      <p>Try adjusting your search or filters</p>
+    </div>
+  </section>
+
+ <section class="container section-pad">
+  <h2 class="section-title">More Dinosaurs</h2>
+  <div class="dino-grid">
+    <!-- New dinosaurs -->
+    <article class="dino-card" data-diet="herbivore" data-period="cretaceous">
+      <div class="dino-img torosaurus-img" role="img" aria-label="Torosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Torosaurus</h3>
+        <p>A large ceratopsian dinosaur with one of the largest skulls of any known land animal.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="herbivore" data-period="cretaceous">
+      <div class="dino-img pachycephalosaurus-img" role="img" aria-label="Pachycephalosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Pachycephalosaurus</h3>
+        <p>Known for its thick, domed skull which may have been used in head-butting contests.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="carnivore" data-period="jurassic">
+      <div class="dino-img allosaurus-img" role="img" aria-label="Allosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Allosaurus</h3>
+        <p>A large predator with sharp teeth and claws, often called the "lion of the Jurassic".</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+          <span><i class="fas fa-dramstick-bite" aria-hidden="true"></i> Carnivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="herbivore" data-period="jurassic">
+      <div class="dino-img diplodocus-img" role="img" aria-label="Diplodocus illustration"></div>
+      <div class="dino-info">
+        <h3>Diplodocus</h3>
+        <p>One of the longest dinosaurs with a whip-like tail and neck perfect for browsing vegetation.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="carnivore" data-period="jurassic">
+      <div class="dino-img ceratosaurus-img" role="img" aria-label="Ceratosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Ceratosaurus</h3>
+        <p>A medium-sized predator distinguished by the horn on its snout and osteoderms along its back.
+          This dinosaur is the earliest ancestor of the T-Rex and most of the other famous theropods and even todays birds.
+        </p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+          <span><i class="fas fa-dramstick-bite" aria-hidden="true"></i> Carnivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="herbivore" data-period="jurassic">
+      <div class="dino-img camarasaurus-img" role="img" aria-label="Camarasaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Camarasaurus</h3>
+        <p>A large sauropod with a boxy skull and spoon-shaped teeth, among the most common Jurassic dinosaurs.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="herbivore" data-period="jurassic">
+      <div class="dino-img apatosaurus-img" role="img" aria-label="Apatosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Apatosaurus</h3>
+        <p>Formerly known as Brontosaurus, this massive sauropod had a long neck and whip-like tail.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="carnivore" data-period="jurassic">
+      <div class="dino-img dilophosaurus-img" role="img" aria-label="Dilophosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Dilophosaurus</h3>
+        <p>Known for the distinctive twin crests on its head, this predator was larger than commonly depicted. 
+          It also lacks the venom spitting abilities and the frills that was made popular in the media</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Jurassic Period</span>
+          <span><i class="fas fa-dramstick-bite" aria-hidden="true"></i> Carnivore</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- The following cards were outside the grid, now moved inside -->
+    <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+      <div class="dino-img carnotaurus-img" role="img" aria-label="Carnotaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Carnotaurus</h3>
+        <p>A distinctive predator with bull-like horns and extremely short arms, even for a theropod.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-dramstick-bite" aria-hidden="true"></i> Carnivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="herbivore" data-period="cretaceous">
+      <div class="dino-img titanosaurus-img" role="img" aria-label="Titanosaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Titanosaurus</h3>
+        <p>A genus of sauropod dinosaurs that gave its name to the diverse group Titanosauria.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i> Herbivore</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="dino-card" data-diet="carnivore" data-period="cretaceous">
+      <div class="dino-img mapusaurus-img" role="img" aria-label="Mapusaurus illustration"></div>
+      <div class="dino-info">
+        <h3>Mapusaurus</h3>
+        <p>A giant carcharodontosaurid theropod that may have hunted in packs to take down large prey.</p>
+        <div class="dino-meta">
+          <span><i class="fas fa-history" aria-hidden="true"></i> Cretaceous Period</span>
+          <span><i class="fas fa-dramstick-bite" aria-hidden="true"></i> Carnivore</span>
+        </div>
+      </div>
+    </article>
+</section>
+
+<!-- Timeline -->
+<section id="timeline" class="timeline">
+  <div class="container timeline-content">
+    <h2 class="section-title timeline-title">Dinosaur Timeline</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-period">Triassic<br>(252–201 mya)</div>
+      <button class="timeline-dot" data-title="First Dinosaurs Appear" data-body="Small, bipedal dinosaurs like Eoraptor and Herrerasaurus emerge." title="More info about Triassic" aria-label="More info about Triassic"></button>
+      <div class="timeline-info">
+        <h3>First Dinosaurs Appear</h3>
+        <p>Start of the Mesozoic era, also known as the age of reptilians.
+          Small, bipedal dinosaurs like Eoraptor and Herrerasaurus emerge.
+        Though the dinosaurs in this era were not the ones we associate the name today with. </p>
+        <a href="triassic.html" class="learn-more" data-title="Triassic Period Details" data-body="Explore the beginning of the dinosaur era">Learn More</a>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-period">Jurassic<br>(201–145 mya)</div>
+      <button class="timeline-dot" data-title="Age of Giants" data-body="Large sauropods like Brachiosaurus and predators like Allosaurus dominate." title="More info about Jurassic" aria-label="More info about Jurassic"></button>
+      <div class="timeline-info">
+        <h3>Age of Giants</h3>
+        <p>Large sauropods like Brachiosaurus and predators like Allosaurus dominate.
+          The actual start of the classic dinosaurs we know today. Such as Stegosaurus, Diplodocus and the first birdlike theropod Archaeopteryx.
+        </p>
+        <a href="jurassic.html" class="learn-more" data-title="Jurassic Period Details" data-body="Discover the golden age of dinosaurs">Learn More</a>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-period">Cretaceous<br>(145–66 mya)</div>
+      <button class="timeline-dot" data-title="Dinosaur Diversity Peak" data-body="T‑Rex, Triceratops, and Velociraptors roam the Earth before the mass extinction." title="More info about Cretaceous" aria-label="More info about Cretaceous"></button>
+      <div class="timeline-info">
+        <h3>Dinosaur Diversity Peak</h3>
+        <p>T‑Rex, Triceratops, and Velociraptors roam the Earth before the mass extinction.
+          The final chapter of the dinosaur era, marked by incredible diversity and the rise of flowering plants.
+          Also this is the most famous period due to the dinosaurs that lived in it being the most popular ones.
+          Many classic dinosaurs that first comes to mind belongs to this era.
+        </p>
+        <a href="cretaceous.html" class="learn-more" data-title="Cretaceous Period Details" data-body="Explore the final chapter of the dinosaur era">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fossils Section -->
+<section id="fossils" class="container section-pad">
+  <h2 class="section-title">Fossil Discoveries</h2>
+  <p class="section-intro">Explore significant fossil finds that have shaped our understanding of prehistoric life, including details about their discovery, geographic origins, and scientific importance.</p>
+
+<!-- In the fossil filters section -->
+<div class="fossil-filters">
+    <button class="fossil-filter-btn active" data-filter="all">All Fossils</button>
+    <button class="fossil-filter-btn" data-filter="skeleton">Skeletons</button>
+    <button class="fossil-filter-btn" data-filter="trace">Trace Fossils</button>
+    <button class="fossil-filter-btn" data-filter="amber">Amber Fossils</button>
+</div>
+
+  <div class="fossil-grid">
+    <!-- Fossil 1 - Archaeopteryx -->
+    <article class="fossil-card" data-type="skeleton">
+      <div class="fossil-img archaeopteryx-img" role="img" aria-label="Archaeopteryx fossil specimen"></div>
+      <div class="fossil-info">
+        <h3>Archaeopteryx</h3>
+        <p class="fossil-period">Late Jurassic (150 mya)</p>
+        <p class="fossil-description">One of the most important transitional fossils, showing both dinosaur and bird characteristics.</p>
+        
+        <div class="fossil-details">
+          <div class="detail-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Discovery Location</h4>
+              <p>Solnhofen Limestone, Bavaria, Germany</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Year Discovered</h4>
+              <p>1861 (first specimen)</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <div>
+              <h4>Discoverer</h4>
+              <p>Initially found by quarry workers, studied by Christian Erich Hermann von Meyer</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            <div>
+              <h4>Significance</h4>
+              <p>Provided crucial evidence for Darwin's theory of evolution, demonstrating the link between dinosaurs and birds.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="archaeopteryx.html" class="learn-more">Explore Full Details</a>
+      </div>
+    </article>
+
+    <!-- Fossil 2 - Dinosaur Footprints -->
+    <article class="fossil-card" data-type="trace">
+      <div class="fossil-img footprint-img" role="img" aria-label="Dinosaur footprint fossil"></div>
+      <div class="fossil-info">
+        <h3>Dinosaur Footprints</h3>
+        <p class="fossil-period">Various periods</p>
+        <p class="fossil-description">Trace fossils that provide evidence of dinosaur movement, behavior, and social structure.</p>
+        
+        <div class="fossil-details">
+          <div class="detail-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Notable Sites</h4>
+              <p>Glen Rose Formation (Texas), Purbeck Beds (England), Lark Quarry (Australia)</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Key Discoveries</h4>
+              <p>1930s (Paluxy River tracks), 1970s (Lark Quarry trackway)</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <div>
+              <h4>Research Significance</h4>
+              <p>Revealed dinosaur speeds, herd behavior, and predator-prey interactions</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            <div>
+              <h4>Scientific Value</h4>
+              <p>Provide direct evidence of behavior that can't be determined from bones alone.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="footprints.html" class="learn-more">Explore Full Details</a>
+      </div>
+    </article>
+
+    <!-- Fossil 3 - Amber Fossils -->
+    <article class="fossil-card" data-type="amber">
+      <div class="fossil-img amber-img" role="img" aria-label="Amber fossil with insect inclusion"></div>
+      <div class="fossil-info">
+        <h3>Amber Inclusions</h3>
+        <p class="fossil-period">Mostly Cretaceous (100 mya)</p>
+        <p class="fossil-description">Fossilized tree resin preserving incredible details of small organisms and sometimes feathers.</p>
+        
+        <div class="fossil-details">
+          <div class="detail-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Primary Locations</h4>
+              <p>Hukawng Valley (Myanmar), Baltic region, Dominican Republic</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Important Finds</h4>
+              <p>2016 - First dinosaur tail in amber, 2019 - Ancient bird skull in amber</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <div>
+              <h4>Key Researchers</h4>
+              <p>Lida Xing (China), Ryan McKellar (Canada)</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            <div>
+              <h4>Scientific Impact</h4>
+              <p>Revolutionized understanding of feather evolution and preservation of soft tissues.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="amber.html" class="learn-more">Explore Full Details</a>
+      </div>
+    </article>
+
+    <!-- Fossil 4 - Sue the T.rex -->
+    <article class="fossil-card" data-type="skeleton">
+      <div class="fossil-img sue-img" role="img" aria-label="Sue the T.rex fossil"></div>
+      <div class="fossil-info">
+        <h3>Sue the T.rex</h3>
+        <p class="fossil-period">Late Cretaceous (67 mya)</p>
+        <p class="fossil-description">The most complete, best-preserved Tyrannosaurus rex specimen ever discovered.</p>
+        
+        <div class="fossil-details">
+          <div class="detail-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Discovery Location</h4>
+              <p>Cheyenne River Indian Reservation, South Dakota, USA</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            <div>
+              <h4>Year Discovered</h4>
+              <p>August 12, 1990</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <div>
+              <h4>Discoverer</h4>
+              <p>Sue Hendrickson, for whom the fossil is named</p>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            <div>
+              <h4>Significance</h4>
+              <p>90% complete skeleton providing unprecedented insight into T.rex anatomy and paleobiology.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a href="https://en.wikipedia.org/wiki/Sue_(dinosaur)" class="learn-more">Explore Full Details</a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Add fossil-specific no results message -->
+  <div class="no-results fossil-no-results" aria-live="polite" style="display: none;">
+    <i class="fas fa-exclamation-circle no-results-icon" aria-hidden="true"></i>
+    <h3>No fossils found</h3>
+    <p>Try adjusting your filters</p>
+  </div>
+</section>
+
+<!-- Fossil Discovery Map Section -->
+<section class="discovery-map section-pad">
+  <div class="container">
+    <h2 class="section-title">Major Fossil Discovery Sites</h2>
+    <p class="section-intro">Explore the geographic distribution of significant dinosaur fossil discoveries around the world.</p>
+    
+    <!-- In your index.html file, replace the map-points section with this code: -->
+<div class="map-container">
+  <div class="world-map" aria-label="World map showing fossil discovery locations">
+  </div>
+</div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="logo">
+        <i class="fas fa-dinosaur" aria-hidden="true"></i>
+        <h1>Dinopedia</h1>
+      </div>
+      <p>Your ultimate guide to the prehistoric world</p>
+      <div class="social-icons">
+        <a href="twitter.html" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://web.facebook.com/profile.php?id=61575091923681&sk=friends_mutual" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://ahnaf-3rd.github.io/Ahnaf-Usaid/" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p>&copy; 2025 Dinopedia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" aria-label="Close dialog" data-close>
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-body"></p>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
