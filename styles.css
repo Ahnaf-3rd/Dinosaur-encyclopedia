@@ -519,3 +519,103 @@ footer::before { content: ''; position: absolute; inset: 0; background: url('htt
     background: var(--primary);
     color: #fff;
 }
+
+/* =====================
+   Contribution Section
+   ===================== */
+.contribution-section {
+  background: var(--cream);
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.contribution-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contribution-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.contact-methods {
+  margin-top: 30px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.contact-method:hover {
+  transform: translateY(-3px);
+}
+
+.contact-method i {
+  font-size: 24px;
+  margin-right: 15px;
+  color: var(--primary);
+  min-width: 30px;
+  text-align: center;
+}
+
+.contact-method h3 {
+  margin: 0 0 5px 0;
+  color: var(--dark);
+  font-size: 1.1rem;
+}
+
+.contact-method a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-method a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+.contribution-image {
+  display: flex;
+  justify-content: center;
+}
+
+.contribution-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background-image: url('https://images.theconversation.com/files/654612/original/file-20250311-62-nvycbs.jpg?ixlib=rb-4.1.0&rect=397%2C0%2C4082%2C2041&q=45&auto=format&w=1356&h=668&fit=crop');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contribution-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-method i {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
