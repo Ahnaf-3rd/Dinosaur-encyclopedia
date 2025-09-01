@@ -99,6 +99,12 @@ section { scroll-margin-top: 90px; }
 .camarasaurus-img { background-image: url('camarasaurus.png'); }
 .apatosaurus-img { background-image: url('apatosaurus.png'); }
 .dilophosaurus-img { background-image: url('dipholosaurus.png'); }
+/* Add these new image classes to your existing CSS */
+.quetzalcoatlus-img { background-image: url('quetzalcoatlus.png'); }
+.mosasaurus-img { background-image: url('mosasaurus.png'); }
+.plesiosaurus-img { background-image: url('plesiosaurus.png'); }
+.ichthyosaurus-img { background-image: url('ichthyosaurus.png'); }
+.elasmosaurus-img { background-image: url('elasmosaurus.png'); }
 
 .dino-info { padding: 18px; }
 .dino-info h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 8px; font-family: 'Chakra Petch', sans-serif; }
