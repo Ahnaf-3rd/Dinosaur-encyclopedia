@@ -89,7 +89,7 @@ section { scroll-margin-top: 90px; }
 .ceratosaurus-img { background-image: url('Ceratosaurus.png'); }
 .camarasaurus-img { background-image: url('camarasaurus.png'); }
 .apatosaurus-img { background-image: url('apatosaurus.png'); }
-.dilophosaurus-img { background-image: url('dipholosaurus.png'); }
+.dilophosaurus-img { background-image: url('dilophosaurus.png'); }
 /* Add these new image classes to your existing CSS */
 .quetzalcoatlus-img { background-image: url('quetzalcoatlus.png'); }
 .mosasaurus-img { background-image: url('mosasaurus.png'); }
@@ -97,6 +97,7 @@ section { scroll-margin-top: 90px; }
 .ichthyosaurus-img { background-image: url('ichthyosaurus.png'); }
 .elasmosaurus-img { background-image: url('elasmosaurus.png'); }
 .avian_dinosaur-img { background-image: url('ave.png'); }
+.terror_bird-img { background-image: url('phorusrhacidae.png'); }
 
 .dino-info { padding: 18px; }
 .dino-info h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 8px; font-family: 'Chakra Petch', sans-serif; }
