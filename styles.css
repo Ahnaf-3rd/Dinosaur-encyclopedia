@@ -1,6 +1,4 @@
-/* =====================
-   Global Styles
-   ===================== */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
   --primary: #4a8f3c;
@@ -17,9 +15,7 @@ body { background: var(--light); color: var(--dark); line-height: 1.6; font-fami
 .section-pad { padding: 40px 0; }
 section { scroll-margin-top: 90px; }
 
-/* =====================
-   Header
-   ===================== */
+
 .site-header {
   background: var(--primary);
   padding: 12px 0;
@@ -40,9 +36,7 @@ section { scroll-margin-top: 90px; }
 .search-bar button { background: transparent; border: 0; color: var(--primary); cursor: pointer; }
 .sr-only { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 
-/* =====================
-   Hero
-   ===================== */
+
 .hero {
   background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
               url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
@@ -57,9 +51,6 @@ section { scroll-margin-top: 90px; }
 }
 .btn:hover { background: #a94232; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,.2); }
 
-/* =====================
-   Sections & Cards
-   ===================== */
 .section-title {
   text-align: center; margin: 20px 0 24px; color: var(--primary);
   font-size: 2rem; font-family: 'Chakra Petch', sans-serif; position: relative;
@@ -105,6 +96,7 @@ section { scroll-margin-top: 90px; }
 .plesiosaurus-img { background-image: url('plesiosaurus.png'); }
 .ichthyosaurus-img { background-image: url('ichthyosaurus.png'); }
 .elasmosaurus-img { background-image: url('elasmosaurus.png'); }
+.avian_dinosaur-img { background-image: url('ave.png'); }
 
 .dino-info { padding: 18px; }
 .dino-info h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 8px; font-family: 'Chakra Petch', sans-serif; }
@@ -234,18 +226,12 @@ footer::before { content: ''; position: absolute; inset: 0; background: url('htt
 
 .placeholder { text-align: center; color: #555; }
 
-/* =====================
-   Modal
-   ===================== */
 .modal[aria-hidden="true"] { display: none; }
 .modal { position: fixed; inset: 0; z-index: 200; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); }
 .modal-card { position: relative; z-index: 1; background: #fff; color: var(--dark); width: min(600px, 92%); margin: 12vh auto 0; padding: 22px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
 .modal-close { position: absolute; top: 10px; right: 10px; background: transparent; border: 0; font-size: 20px; cursor: pointer; color: var(--dark); }
 
-/* =====================
-   Responsive
-   ===================== */
 @media (max-width: 900px) {
   .header-content { grid-template-columns: auto auto auto; }
   .search-bar { width: 220px; }
@@ -383,8 +369,8 @@ footer::before { content: ''; position: absolute; inset: 0; background: url('htt
 
 .map-container {
   position: relative;
-  width: 100%;              /* Make it responsive */
-  max-width: 1000px;        /* Limit so it matches the source image width */
+  width: 100%;              
+  max-width: 1000px;        
   margin: 30px auto;
   border-radius: 8px;
   overflow: hidden;
@@ -526,9 +512,7 @@ footer::before { content: ''; position: absolute; inset: 0; background: url('htt
     color: #fff;
 }
 
-/* =====================
-   Contribution Section
-   ===================== */
+
 .contribution-section {
   background: var(--cream);
   border-radius: 20px;
@@ -624,4 +608,248 @@ footer::before { content: ''; position: absolute; inset: 0; background: url('htt
     margin-right: 0;
     margin-bottom: 10px;
   }
+}
+
+
+.fossil-details.hidden {
+  display: none;
+}
+
+.fossil-details {
+  margin-top: 12px;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+}
+
+.toggle-details {
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+.toggle-details:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Map markers pointer */
+.map-marker {
+  z-index: 20;
+}
+
+/* Clear search button */
+.clear-search {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.clear-search:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Mobile nav open state */
+.site-nav.open {
+  display: block;
+}
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary);
+    padding: 15px;
+    z-index: 99;
+  }
+  .site-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .site-nav a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* Random button style */
+#randomDinoBtn {
+  background: #8f6c3c;
+  margin-top: 20px;
+}
+#randomDinoBtn:hover {
+  background: #6e512d;
+  transform: translateY(-2px);
+}
+
+/* Timeline visible animation */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Additional polish */
+.result-counter {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+.no-results {
+  text-align: center;
+  padding: 30px;
+}
+
+/* =====================
+   DETAIL PAGE SYSTEM
+   ===================== */
+.dino-detail-page {
+  display: none;
+  background: #fef6e6;
+  padding: 2rem 0 4rem;
+  min-height: 100vh;
+}
+
+.detail-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 40px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.detail-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-family: 'Chakra Petch', monospace;
+}
+
+.back-home-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-home-btn:hover {
+  background: #2d6a2d;
+  transform: translateY(-2px);
+}
+
+.detail-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background: #f4eddf;
+  padding: 1.5rem;
+  border-radius: 24px;
+  margin: 1.5rem 0;
+}
+
+.detail-stats div {
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.detail-stats strong {
+  color: var(--primary);
+}
+
+#detailExtendedText {
+  margin-top: 2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+#detailExtendedText h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Chakra Petch', monospace;
+}
+
+#detailExtendedText p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.hide-main-sections .main-section-group {
+  display: none;
+}
+
+.show-detail-page .dino-detail-page {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .detail-header h2 {
+    font-size: 1.8rem;
+  }
+  .back-home-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .detail-container {
+    padding: 1rem;
+  }
+  .detail-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Ensure Details button matches the 'Learn More' style */
+.dino-info .learn-more {
+  margin-top: 12px;
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.dino-info .learn-more:hover {
+  background-color: #a94232;
+  transform: translateY(-2px);
 }
